@@ -91,7 +91,7 @@ export default function Navigation(){
         name="Settings" 
         component={PayScreen}
         options={{
-          title: 'Configuracoes',
+          title: 'Ajustes',
         }}   
       />
     </tab.Navigator>

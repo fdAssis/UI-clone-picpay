@@ -17,13 +17,13 @@ export const Img = styled.Image`
 
 `;
 
-export const Title = styled.Title`
+export const Title = styled.Text`
   color: #fff;
   font-size: 18px;
   font-weight: bold;
 `;
 
-export const Description = styled.Title`
+export const Description = styled.Text`
   color: #fff;
   font-size: 14px;
   margin-top: 15px;

@@ -6,6 +6,8 @@ import { Wrapper, Container, Header, BalanceContainer, BalanceTitle, Balance } f
 
 import Suggestions from "../../components/Suggestions";
 import Activites from "../../components/Activites";
+import Tips from '../../components/Tips';
+
 export default function Home() {
   return (
     <Wrapper>
@@ -25,6 +27,7 @@ export default function Home() {
 
         <Suggestions />
         <Activites />
+        <Tips />
       </Container>
     </Wrapper>
   )

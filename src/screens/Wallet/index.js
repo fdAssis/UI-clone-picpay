@@ -59,7 +59,7 @@ export default function Home(){
           
           <BalanceContainer>
             <Value>
-              R$ <Bold>{isVisible ? "0,00" : "----"}</Bold>
+              R$ <Bold>{isVisible ? "00,00" : "----"}</Bold>
             </Value>
             
             <EyeButton onPress={handleToggleVisibility}>
@@ -92,7 +92,9 @@ export default function Home(){
         </UseBalanceTitle>
         <Switch 
           value={useBalance}
-          onValueChange={handleUseBalance} 
+          onValueChange={handleUseBalance}
+          thumbColor={useBalance ? "#0DB060" : "#868686" }
+
         />
       </UseBalance>
 

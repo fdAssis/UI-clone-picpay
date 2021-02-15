@@ -95,10 +95,61 @@ export const PaymentMethodsTitle = styled.Text`
   text-transform: uppercase;
 `;
 
-
 export const Card = styled.View`
   background: #1e232a;
   padding: 15px;
   border-radius: 8px;
   margin-top: 10px;
+`;
+
+export const CardBody = styled.View`
+  flex-direction: row;
+`;
+
+export const CardDetails = styled.View`
+  flex: 1;
+  margin-right: 20px;
+`;
+export const CardTitle = styled.Text`
+  color: #FFF;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+`;
+export const CardInfo = styled.Text`
+  color: #FFF;
+  font-size: 14px;
+
+`;
+export const Img = styled.Image`
+  width: 80px;
+`;
+
+export const AddButton = styled.TouchableOpacity`
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+export const AddLabel = styled.Text`
+  color: #0DB060;
+  font-size: 18px;
+  margin-left: 10px;
+`;
+
+export const UseTicketContainer = styled.View`
+  align-items: center;
+  margin-top: 20px;
+
+`;
+export const UseTicketButton = styled.TouchableOpacity`
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const UseTicketLabel = styled.Text`
+  color: #0DB060;
+  font-size: 14px;
+  margin-left: 10px;
+  text-decoration-line: underline;
 `;

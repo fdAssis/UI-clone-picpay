@@ -19,8 +19,19 @@ import {
   PaymentMethods,
   PaymentMethodsTitle,
   Card,
+  CardBody,
+  CardDetails,
+  CardTitle,
+  CardInfo,
+  Img,
+  AddButton,
+  AddLabel,
+  UseTicketContainer,
+  UseTicketButton,
+  UseTicketLabel,
  } from './styles';
 
+ import creditCard from '../../img/credit-card.png'
 
 export default function Home(){
   return (
@@ -69,7 +80,39 @@ export default function Home(){
         <PaymentMethodsTitle>
           Formas de Pagamento
         </PaymentMethodsTitle>
+
+
+        <Card>
+          <CardBody> 
+            <CardDetails>
+              <CardTitle>
+                Cadastre seu cartao de credito
+              </CardTitle>
+              <CardInfo>
+                Cadastre seu cartao de credito para poder fazer pagamentos mesmo
+                quando nao tiver saldo no seu PicPay.
+              </CardInfo>
+            </CardDetails>
+
+            <Img source={creditCard} resizeMode="contain"/>
+          </CardBody>
+
+          <AddButton>
+            <Feather name="plus-circle" size={30} color="#0DB060"/>
+            <AddLabel>
+              Adicionar Cartao de credito
+            </AddLabel>
+          </AddButton>
+
+        </Card>
       </PaymentMethods>
+
+      <UseTicketContainer>
+        <UseTicketButton>
+          <Feather name="dollar-sign" size={20} color="#0DB060" />
+          <UseTicketLabel>Usar codigo promocional</UseTicketLabel>
+        </UseTicketButton>
+      </UseTicketContainer>
 
     </Wrapper>
   )

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 import {Switch} from 'react-native'; 
 import { 
@@ -34,19 +34,36 @@ import {
  import creditCard from '../../img/credit-card.png'
 
 export default function Home(){
+
+  const [isVisible, setSivible] = useState(true);
+  const [useBalance, setUseBalance] = useState(true)
+
+  function handleToggleVisibility(){
+    setSivible((prevState) => !prevState);
+  }
+
+  function handleUseBalance(){
+    setUseBalance((prevState) => !prevState);
+  }
+
   return (
     <Wrapper>
-      <Header colors={['#52E78c', '#1ab563']}>
+      <Header 
+        colors={
+          useBalance
+          ? ['#52E78c', '#1ab563']
+          : ['#d3d3d3', '#868686']
+        }>
         <HeaderContainer>
           <Title>Saldo PicPay</Title>
           
           <BalanceContainer>
             <Value>
-              R$ <Bold>0,00</Bold>
+              R$ <Bold>{isVisible ? "0,00" : "----"}</Bold>
             </Value>
             
-            <EyeButton>
-              <Feather name="eye" size={30} color='#FFF'/>
+            <EyeButton onPress={handleToggleVisibility}>
+               <Feather name={isVisible ? "eye" : "eye-off"} size={30} color='#FFF'/>     
             </EyeButton>
           </BalanceContainer>
 
@@ -73,7 +90,10 @@ export default function Home(){
         <UseBalanceTitle>
           Usar saldo ao pagar
         </UseBalanceTitle>
-        <Switch />
+        <Switch 
+          value={useBalance}
+          onValueChange={handleUseBalance} 
+        />
       </UseBalance>
 
       <PaymentMethods>

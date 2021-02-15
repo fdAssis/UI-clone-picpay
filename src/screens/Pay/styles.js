@@ -8,7 +8,7 @@ export const Wrapper = styled.View`
 export const Header = styled.View`
  flex-direction: row;
  height: 70px;
- background: rgba(255, 255, 255, 0.9);
+ background: #000;
  padding: 0 16px;
  align-items: center;
  justify-content: space-between;
